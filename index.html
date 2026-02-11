@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سوق المفتوح + ایران</title>
+    <link rel="manifest" href="/manifest.json">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: Tahoma, sans-serif; background: #f3f4f6; }
+        .ad-card { background: white; border-radius: 10px; padding: 15px; margin-bottom: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 flex justify-between items-center sticky top-0 z-50">
+        <h1 class="text-xl font-bold">سوق المفتوح + ایران</h1>
+        <div id="google_translate_element"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="p-4">
+        <!-- Add Ad Section -->
+        <section class="bg-white p-4 rounded-lg mb-6 shadow">
+            <h2 class="font-bold mb-3 text-blue-600">ثبت آگهی جدید (۱، ۳ یا ۷ روزه)</h2>
+            <input type="text" placeholder="عنوان آگهی..." class="w-full border p-2 mb-2 rounded">
+            <textarea placeholder="توضیحات..." class="w-full border p-2 mb-2 rounded"></textarea>
+            
+            <div class="bg-yellow-100 p-3 rounded mb-2 text-sm text-gray-700">
+                <p>💳 کارت: ۰۱۲۰-۰۰۰۰-۰۰۰۰-۰۰۰۰</p>
+                <p>🪙 تتر: Txxxxxxxxxxxxxxx</p>
+                <p class="font-bold">مبلغ را واریز و عکس رسید را آپلود کنید:</p>
+            </div>
+            
+            <input type="file" class="mb-2 block w-full text-sm text-gray-500">
+            <button class="bg-green-500 text-white w-full py-2 rounded font-bold">ارسال برای تایید مدیریت</button>
+        </section>
+
+        <!-- Ads List (Sample) -->
+        <h2 class="font-bold mb-3">آخرین آگهی‌ها</h2>
+        <div class="ad-card">
+            <img src="https://via.placeholder.com" class="w-full rounded mb-2">
+            <h3 class="font-bold text-lg">فروش آپارتمان در مسقط</h3>
+            <p class="text-gray-600 text-sm">قیمت: ۵۰,۰۰۰ ریال عمان | وضعیت: تایید شده</p>
+            <button class="mt-2 bg-blue-100 text-blue-600 px-4 py-1 rounded">چت و ترجمه</button>
+        </div>
+    </main>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'fa', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//://translate.google.com"></script>
+
+    <!-- Simple PWA Script -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
+    </script>
+</body>
+</html>
